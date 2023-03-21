@@ -8,6 +8,8 @@
 
     <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.4/dist/full.css" rel="stylesheet" type="text/css" />
     
+    <script src="https://kit.fontawesome.com/b8b380aec0.js" crossorigin="anonymous"></script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -26,28 +28,28 @@
         <h1 class="text-4xl">Tilwat the Quran when you are not with the physical Quran</h1>
         <p class="mt-2">It's Free!!!</p>
     </header>
+    
+    
 
     <main class="md:container md:mx-auto mt-6">
         <!-- Cards -->
         <div id="cards-container" class="grid md:grid-cols-3 gap-6">
             <!-- Cards Adding Dynamically -->
         </div>
-
         <!-- Modal -->
-        <div id="modal-section">
-            <input type="checkbox" id="my-modal" class="modal-toggle" />
-            <div class="modal">
-                <div class="modal-box">
+        <input type="checkbox" id="my-modal" class="modal-toggle" />
+        <div class="modal">
+            <div class="modal-box">
                     <label for="my-modal" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
                     <h3 class="font-bold text-xl text-blue-700 text-right mr-8" id="modal-arabic-title"></h3>
                     <h3 class="font-bold text-xl" id="modal-english-title"></h3>
-                    <p class="py-4">You've been selected for a chance to get one year of subscription to use Wikipedia for free!</p>
+                    <p class="py-4 text-right font-bold leading-9" id="ayahs-are">
+                    </p>
                     <div class="modal-action">
                         <label for="my-modal" class="btn bg-violet-900 tracking-widest">Reading Done</label>
                     </div>
                 </div>
             </div>
-        </div>
     </main>
 
     <script src="./js/index.js"></script>
