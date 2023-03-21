@@ -13,13 +13,14 @@ const displayQuran = (datas) => {
         const {name, englishName, ayahs} = data;
         const div = document.createElement('div');
         div.innerHTML = `
-            <div class="card h-64 w-auto bg-base-100 shadow-xl">
+            <div class="card h-[17rem] w-auto bg-base-100 shadow-xl">
                 <div class="card-body">
                     <h2 class="card-title text-2xl text-blue-700 justify-end">${name}</h2>
                     <h3 class="card-title justify-">${englishName}</h3>
-                    <p class="text-right">${ayahs[0].text} ${ayahs[1].text}</p>
+                    <p class="text-right">${ayahs[0].text.slice(0, 40)} ${ayahs[1].text.slice(0, 80)}</p>
+                   
                     <div class="card-actions justify-end">
-                      <button class="btn btn-primary">Buy Now</button>
+                      <button class="btn btn-primary tracking-wide">Tap to Read</button>
                     </div>
                 </div>
             </div>
