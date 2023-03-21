@@ -1,16 +1,15 @@
 const loadQuran = async() => {
-    const URL = "http://api.alquran.cloud/v1/quran/quran-uthmani";
+    const URL = './completeQuran.json';
     const res = await fetch(URL);
     const data = await res.json();
-    // displayQuran(data);
     displayQuran(data.data.surahs)
 }
 
 const displayQuran = (datas) => {
-    console.log(datas)
+    // console.log(datas)
     const cardsContainer = document.getElementById('cards-container');
     datas.slice(0,15).map(data => {
-        // console.log(data.number)
+        console.log(data.number)
         const {name, englishName, ayahs, number} = data;
         const div = document.createElement('div');
         div.innerHTML = `
