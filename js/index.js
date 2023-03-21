@@ -37,14 +37,15 @@ const loadModal = async(number) => {
 }
 
 const displayModal = datas => {
-    const {name, englishName, ayahs} = datas;
-    // console.log(ayahs)
+    const {name, englishName, ayahs, number} = datas;
     document.getElementById('modal-arabic-title').innerText = name;
-    document.getElementById('modal-english-title').innerText = englishName
+    document.getElementById('modal-english-title').innerText = englishName;
+    const span = document.createElement('span');
+    
     const eachSurah = ayahs.map(ayah => {
-        return ayah.text;
+        return ayah.text + " " + ayah.number; 
     })
-    document.getElementById('ayahs-are').innerHTML = eachSurah ;
+    document.getElementById('ayahs-are').innerHTML = eachSurah;
 }
 
 loadQuran();
