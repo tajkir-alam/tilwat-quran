@@ -9,7 +9,7 @@ const loadQuran = async() => {
 const displayQuran = (datas) => {
     const cardsContainer = document.getElementById('cards-container');
     datas.slice(0,15).map(data => {
-        console.log(data.ayahs[0].text.slice(40))
+        // console.log(data.ayahs[0].text.slice(40))
         const {name, englishName, ayahs} = data;
         const div = document.createElement('div');
         div.innerHTML = `
@@ -20,7 +20,7 @@ const displayQuran = (datas) => {
                     <p class="text-right">${ayahs[0].text.slice(0, 40)} ${ayahs[1].text.slice(0, 80)}</p>
                    
                     <div class="card-actions justify-end">
-                      <button class="btn btn-primary tracking-wide">Tap to Read</button>
+                      <label for="my-modal" class="btn btn-primary tracking-wide">Tap to Read</label>
                     </div>
                 </div>
             </div>
