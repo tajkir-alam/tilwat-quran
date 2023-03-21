@@ -48,4 +48,7 @@ const displayModal = datas => {
     document.getElementById('ayahs-are').innerHTML = eachSurah;
 }
 
+
+
+
 loadQuran();
