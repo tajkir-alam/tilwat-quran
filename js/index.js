@@ -7,6 +7,7 @@ const loadQuran = async() => {
 }
 
 const displayQuran = (datas) => {
+    console.log(datas)
     const cardsContainer = document.getElementById('cards-container');
     datas.slice(0,15).map(data => {
         // console.log(data.number)
