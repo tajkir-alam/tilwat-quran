@@ -19,8 +19,11 @@ const displayQuran = (datas, dataLimitFrom, dataLimitTo) => {
                         <h2 class="card-title text-2xl text-blue-700 justify-end">${name}</h2>
                         <h3 class="card-title">${englishName}</h3>
                         <p class="text-right">${ayahs[0].text.slice(0, 40)} ${ayahs[1].text.slice(0, 80)}</p>
-                        <div class="card-actions justify-end">
-                          <label for="my-modal" onclick="loadModal('${number}')" class="btn btn-primary tracking-wide">Tap to Read</label>
+                        <div class="card-actions justify-center">
+                            <div class="flex align-items-center gap-4">
+                                <audio src="" class="w-48" controls></audio>
+                                <label for="my-modal" onclick="loadModal('${number}')" class="btn btn-primary tracking-wide">Tap to Read</label>
+                            </div>
                         </div>
                     </div>
                 </div>
