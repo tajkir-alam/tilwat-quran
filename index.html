@@ -32,6 +32,11 @@
     
 
     <main class="md:container md:mx-auto mt-6">
+        <!-- Spinner ~~~ Loading -->
+        <div class="animate-spin inline-block w-8 h-8 border-[4px] border-current border-t-transparent text-blue-600 rounded-full" role="status" aria-label="loading">
+          <span class="sr-only">Loading...</span>
+        </div>
+
         <!-- Cards -->
         <div id="cards-container" class="grid md:grid-cols-3 gap-6">
             <!-- Cards Adding Dynamically -->
@@ -54,16 +59,15 @@
         <input type="checkbox" id="my-modal" class="modal-toggle" />
         <div class="modal">
             <div class="modal-box">
-                    <label for="my-modal" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
-                    <h3 class="font-bold text-xl text-blue-700 text-right mr-8" id="modal-arabic-title"></h3>
-                    <h3 class="font-bold text-xl" id="modal-english-title"></h3>
-                    <p class="py-4 text-right text-xl font-bold leading-9" id="ayahs-are">  
-                    </p>
-                    <div class="modal-action">
-                        <label for="my-modal" class="btn bg-violet-900 tracking-widest">Reading Done</label>
-                    </div>
+                <label for="my-modal" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+                <h3 class="font-bold text-xl text-blue-700 text-right mr-8" id="modal-arabic-title"></h3>
+                <h3 class="font-bold text-xl" id="modal-english-title"></h3>
+                <p class="py-4 text-right text-xl font-bold leading-9" id="ayahs-are"></p>
+                <div class="modal-action">
+                    <label for="my-modal" class="btn bg-violet-900 tracking-widest">Reading Done</label>
                 </div>
-            </div>
+              </div>
+          </div>
     </main>
 
     <footer class="footer items-center px-4 md:px-20 py-8 bg-neutral text-neutral-content">

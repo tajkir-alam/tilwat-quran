@@ -8,11 +8,8 @@ const loadQuran = async(dataLimitFrom, dataLimitTo) => {
 const displayQuran = (datas, dataLimitFrom, dataLimitTo) => {
     const cardsContainer = document.getElementById('cards-container');
     cardsContainer.textContent = "";
-    // if(dataLimitFrom){
-
         datas.slice(dataLimitFrom, dataLimitTo).map(data => {
             const {name, englishName, ayahs, number} = data;
-            console.log(number)
             const div = document.createElement('div');
             div.innerHTML = `
                 <div class="card h-[17rem] w-auto bg-base-100 shadow-xl">
@@ -22,7 +19,7 @@ const displayQuran = (datas, dataLimitFrom, dataLimitTo) => {
                         <p class="text-right">${ayahs[0].text.slice(0, 40)} ${ayahs[1].text.slice(0, 80)}</p>
                         <div class="card-actions justify-center">
                             <div class="flex align-items-center gap-4">
-                                <audio src="${`https://github.com/Treposting/Surah-API/blob/main/Surah/${number}.mp3?raw=true`}" class="w-48" controls></audio>
+                                <audio id="surah-audio" src="${`https://github.com/Treposting/Surah-API/blob/main/Surah/${number}.mp3?raw=true`}" class="w-48" controls></audio>
                                 <label for="my-modal" onclick="loadModal('${number}')" class="btn btn-primary tracking-wide">Tap to Read</label>
                             </div>
                         </div>
@@ -31,8 +28,6 @@ const displayQuran = (datas, dataLimitFrom, dataLimitTo) => {
             `
             cardsContainer.appendChild(div);
         })
-
-    // }
 }
 
 const loadModal = async(number) => {
