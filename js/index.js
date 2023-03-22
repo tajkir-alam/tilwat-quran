@@ -50,28 +50,38 @@ const displayModal = datas => {
     document.getElementById('ayahs-are').innerHTML = eachSurah;
 }
 
-
+const pageActive = (activePage) => {
+    const pageId = document.getElementById(activePage);
+    pageId.classList = ('btn btn-active');
+}
 
 document.getElementById('page-1').addEventListener('click', function(){
-    loadQuran(0, 15)
+    loadQuran(0, 15);
+    pageActive('page-1');
 })
 document.getElementById('page-2').addEventListener('click', function(){
-    loadQuran(15, 30)
+    loadQuran(15, 30);
+    pageActive('page-2');
 })
 document.getElementById('page-3').addEventListener('click', function(){
-    loadQuran(30, 45)
+    loadQuran(30, 45);
+    pageActive('page-3');
 })
 document.getElementById('page-4').addEventListener('click', function(){
-    loadQuran(45, 60)
+    loadQuran(45, 60);
+    pageActive('page-4');
 })
 document.getElementById('page-5').addEventListener('click', function(){
-    loadQuran(60, 75)
+    loadQuran(60, 75);
+    pageActive('page-5');
 })
 document.getElementById('page-6').addEventListener('click', function(){
-    loadQuran(75, 90)
+    loadQuran(75, 90);
+    pageActive('page-6');
 })
 document.getElementById('page-7').addEventListener('click', function(){
-    loadQuran(90, 114)
+    loadQuran(90, 114);
+    pageActive('page-7');
 })
 
 
