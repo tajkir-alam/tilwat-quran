@@ -32,9 +32,11 @@
     
 
     <main class="md:container md:mx-auto mt-6">
-        <!-- Spinner ~~~ Loading -->
-        <div class="animate-spin inline-block w-8 h-8 border-[4px] border-current border-t-transparent text-blue-600 rounded-full" role="status" aria-label="loading">
-          <span class="sr-only">Loading...</span>
+        <!-- Spinner1 ~~~ Loading -->
+        <div class="text-center hidden" id="spinner1">
+          <div class="animate-spin inline-block w-8 h-8 border-[4px] border-current border-t-transparent text-blue-600 rounded-full" role="status" aria-label="loading">
+            <span class="sr-only">Loading...</span>
+          </div>
         </div>
 
         <!-- Cards -->
@@ -42,6 +44,13 @@
             <!-- Cards Adding Dynamically -->
         </div>
 
+        <!-- Spinner2 ~~~ Loading -->
+        <div class="text-center mt-8 hidden" id="spinner">
+          <div class="animate-spin inline-block w-8 h-8 border-[4px] border-current border-t-transparent text-blue-600 rounded-full" role="status" aria-label="loading">
+            <span class="sr-only">Loading...</span>
+          </div>
+        </div>
+        
         <!-- Pagination -->
         <div class="my-8 text-center">
             <div class="btn-group">

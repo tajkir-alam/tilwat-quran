@@ -1,4 +1,5 @@
 const loadQuran = async(dataLimitFrom, dataLimitTo) => {
+    document.getElementById('spinner1').className = ("block text-center");
     const URL = './js/completeQuran.json';
     const res = await fetch(URL);
     const data = await res.json();
@@ -27,7 +28,8 @@ const displayQuran = (datas, dataLimitFrom, dataLimitTo) => {
                 </div>
             `
             cardsContainer.appendChild(div);
-        })
+        });
+    document.getElementById('spinner1').className = ("hidden text-center");
 }
 
 const loadModal = async(number) => {
