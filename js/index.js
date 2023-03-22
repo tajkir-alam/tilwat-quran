@@ -99,7 +99,6 @@ document.getElementById('page-7').addEventListener('click', function(){
     pageActive('page-7');
 })
 
-
 window.addEventListener('load', function(){
     loadQuran(0, 15);
 })
